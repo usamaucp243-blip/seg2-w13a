@@ -18,7 +18,7 @@ jobs:
       - name: Build Website
         run: npx parcel build "source/index.html" --dist-dir "dist" --public-url "/"
       - name: Build Docker Image
-        run: docker image build . -t imranucp/seg1w12b:v01
+        run: docker image build . -t usamajaan/seg2w13a:v01
       - name: See the Image
         run: docker image ls
       - name: Login to Docker Hub
@@ -27,4 +27,4 @@ jobs:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push Docker Image on the Docker Hub
-        run: docker image push imranucp/seg1w12b:v01
+        run: docker image push usamajaan/seg2w13a:v01
